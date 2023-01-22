@@ -2,6 +2,12 @@
 
 <ul>
  <% @tasks.each do |task| %>
-    <li><%= task.title %></li>
+  <%if task.completed == true %>
+       <input checked type="checkbox" id="task1" name="task" value="task_value">
+  <label for="task1">  <%= task.title %> </label><br>
+  <%else%>
+     <input type="checkbox" id="task1" name="task" value="task_value">
+  <label for="task1">  <%= task.title %> </label><br>
   <% end %>
+  <% end%>
 </ul>
